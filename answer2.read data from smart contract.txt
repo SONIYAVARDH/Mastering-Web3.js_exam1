@@ -1,0 +1,40 @@
+ans2.)- 
+
+soniy@DESKTOP-SL8EOL3 MINGW64 /e/web3.js
+$ node
+Welcome to Node.js v20.11.0.
+Type ".help" for more information.
+// Import web3 library 
+> const Web3 = require('web3');
+undefined
+// Connect to your Ethereum node provider
+> const web3= new Web3("https://mainnet.infura.io/v3/604e4b791c8e4a828929da1d8470b63c");
+undefined
+ABI(Application Binary Interface) of the smart contract
+>  const abi=[
+...     {
+...       "constant": true,
+...       "inputs": [],
+...       "name": "getData",
+...       "outputs": [{"name": "",
+...    "type": "unit256"}],
+...       "payable": false,
+...       "stateMutability": "view",
+...       "type": "function"
+...     }
+...   ];
+undefined
+//Addressof the deployed smart contract here
+> const contractAddress="0x95222290DD7278Aa3Ddd389Cc1E1d165CC4BAfe5";
+undefined
+//Create a contract instance
+> const contract=new web3.eth.Contract(abi,contractAddress);
+undefined
+call a function in the smart contract to read data
+> contract.methods.getData().call((err,result)=>{console.log(result)});
+Promise {
+  <pending>,
+  [Symbol(async_id_symbol)]: 275,
+  [Symbol(trigger_async_id_symbol)]: 6
+}
+        

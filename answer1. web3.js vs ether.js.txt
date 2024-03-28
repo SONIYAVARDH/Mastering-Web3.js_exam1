@@ -1,0 +1,14 @@
+ans.1)-                       Web3.js vs Ether.js
+web3.js and ether.js are both ethereum JavaScript libraries.
+web3.js is developed and maintained by the ethereum foundation. so there is wider support for web3.js as more developers are behind it.
+Ether.js is developed and maintained by Rick Moore-A Canadian developer.
+one major difference between Ether.js and Web3.js is how they handle key management and interation with the Ethereum Blockchain.
+Web3.js assumes that there is a local node connect to the applicaion.it's assumed that the node to store keys,signs transactions,and reads and interacts with the Ethereum Blockchain.
+In reality, this is not often the case most users are not running geth locally.
+Metamask effectively emulate that environment through a browser application,so most web3 apps require.
+Metamask to hold keys, sign transaction,and interact with the Ethereum mainnet.
+
+on the other hand,Ether.js takes a different apporach that we belive gives developer more flexibility.
+Ether.js separates the "Node" into two separate roles:
+1. a "Wallet" that holds keys and signs transaction, and
+2. a "provider" that serves as an anonymous connection to the Ethereum network ,checking state and sending transactions.
